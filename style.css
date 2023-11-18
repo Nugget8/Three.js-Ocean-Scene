@@ -1,0 +1,304 @@
+body
+{
+    margin: 0px;
+    overflow: hidden;
+    font-family: Calibri;
+    touch-action: none;
+    user-select: none;
+}
+
+button
+{
+    appearance: none;
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #fff8;
+    cursor: pointer;
+    outline: none;
+    user-select: none;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+button:active
+{
+    background-color: #fffc;
+}
+
+body > div
+{
+    transform-origin: left top;
+    position: fixed;
+}
+
+canvas
+{
+    width: 100%;
+    height: 100%;
+}
+
+body > div > button
+{
+    position: fixed;
+    z-index: 1;
+    top: 12px;
+    right: 12px;
+    width: 48px;
+    height: 32px;
+    border-radius: 6px;
+}
+
+button.up, button.down
+{
+    position: fixed;
+    top: unset;
+    right: 32px;
+    width: 42px;
+    height: 42px;
+}
+
+button.up:active, button.down:active
+{
+    background-color: #fff8;
+}
+
+button.up
+{
+    bottom: 112px;
+    border-radius: 8px 8px 0px 0px;
+}
+
+button.down
+{
+    bottom: 64px;
+    border-radius: 0px 0px 8px 8px;
+}
+
+button.up > img, button.down > img
+{
+    width: 16px;
+    height: 16px;
+    user-select: none;
+    pointer-events: none;
+}
+
+button.down > img
+{
+    rotate: 180deg;
+}
+
+button.light
+{
+    position: fixed;
+    top: unset;
+    bottom: 32px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 64px;
+    height: 32px;
+}
+
+overlay
+{
+    position: fixed;
+    display: flex;
+    z-index: 3;
+    justify-content: center;
+    inset: 0px;
+    background-color: #0008;
+    overflow-y: scroll;
+    justify-content: center;
+    align-items: center;
+    pointer-events: auto;
+    opacity: 1;
+
+    transition: opacity 300ms;
+}
+
+overlay::-webkit-scrollbar
+{
+    display: none;
+}
+
+overlay.hidden
+{
+    pointer-events: none;
+    opacity: 0;
+}
+
+overlay > div
+{
+    max-width: 90%;
+    max-height: 100%;
+}
+
+overlay > div > div
+{
+    padding: 16px;
+    text-align: center;
+}
+
+overlay > div > div > button
+{
+    width: 256px;
+    height: 32px;
+    margin: 8px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
+.back
+{
+    margin-top: 32px;
+}
+
+inputDiv
+{
+    text-align: start;
+    vertical-align: middle;
+    font-size: 14px;
+    display: inline-block;
+    margin: 8px;
+    background-color: #fff8;
+    width: 256px;
+    box-sizing: border-box;
+    padding: 8px;
+    border: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+toggleDiv
+{
+    display: block;
+}
+
+@property --p
+{
+    syntax: "<percentage>";
+    inherits: false;
+    initial-value: 0%;
+}
+
+toggle
+{
+    display: block;
+    width: 48px;
+    height: 24px;
+    margin: 6px 0px 0px 0px;
+    background-color: #0008;
+    cursor: pointer;
+
+    transition: --p 300ms;
+    background: linear-gradient(to right, #fff 0%, #fff var(--p), #0008 var(--p), #0008 100%);
+}
+
+toggle.enabled
+{
+    --p: 100%;
+}
+
+
+togglethumb
+{
+    display: block;
+    position: absolute;
+    transform: translateY(calc(-100% + 4px));
+    cursor: pointer;
+
+    transition: transform 300ms;
+}
+
+togglethumb.enabled
+{
+    transform: translate(calc(48px - 100%), calc(-100% + 4px));
+}
+
+input[type="range"]
+{
+    appearance: none;
+    display: block;
+    width: 100%;
+    height: 24px;
+    outline: none;
+    margin: 6px 0px 0px 0px;
+}
+
+input[type="range"]::-webkit-slider-thumb, togglethumb
+{
+    appearance: none;
+    display: block;
+    width: 16px;
+    height: 32px;
+    background-color: #ccc;
+}
+
+debug
+{
+    display: block;
+    position: fixed;
+    z-index: 1;
+    top: 8px;
+    left: 8px;
+    padding: 2px;
+    font-size: 14px;
+    background-color: #ffffff80;
+}
+
+info
+{
+    display: block;
+    background-color: #ffffff80;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+code
+{
+    padding: 3px 6px;
+    border-radius: 6px;
+    background-color: #e0e0e0;
+}
+
+.joystick, .joystickHidden
+{
+    position: absolute;
+    z-index: 2;
+    width: 128px;
+    height: 128px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+}
+
+.joystick
+{
+    opacity: 1;
+    transition: opacity 200ms;
+}
+
+.joystickHidden
+{
+    opacity: 0;
+    transition: opacity 200ms;
+}
+
+a
+{
+    color: #03c;
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-decoration: underline;
+}
+
+a:visited
+{
+    color: #03c;
+    text-decoration: none;
+}
