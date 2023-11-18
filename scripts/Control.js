@@ -52,14 +52,14 @@ class Joystick
     {
         const background = document.createElement("img");
         background.draggable = false;
-        background.src = "../images/joystickBackground.png";
+        background.src = "./images/joystickBackground.png";
         background.className = "joystickHidden";
         body.appendChild(background);
         this.background = background;
 
         const handle = document.createElement("img");
         handle.draggable = false;
-        handle.src = "../images/joystickHandle.png";
+        handle.src = "./images/joystickHandle.png";
         handle.className = "joystickHidden";
         body.appendChild(handle);
         this.handle = handle;
