@@ -326,14 +326,14 @@ export function Start()
 
     const touchControlButtons = new Array();
 
-    touchControlButtons.push(newControlButton(false, "../images/triangle.png", "up", false, function()
+    touchControlButtons.push(newControlButton(false, "./images/triangle.png", "up", false, function()
     {
         changeUpState(true);
     }, function()
     {
         changeUpState(false);
     }));
-    touchControlButtons.push(newControlButton(false, "../images/triangle.png", "down", false, function()
+    touchControlButtons.push(newControlButton(false, "./images/triangle.png", "down", false, function()
     {
         changeDownState(true);
     }, function()
