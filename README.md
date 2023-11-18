@@ -5,7 +5,7 @@ This project is an example of lightweight procedural skybox and ocean shaders fo
 | :-: | :-: | :-: |
 | *Daytime* | *Sunset* | *Moon rising* |
 
-I made a [little demo]() so you can check how it runs and looks. It supports touch input too. Or you can watch [the video](https://youtu.be/xt4Nvrw1EMw).
+I made a [little demo](https://nugget8.github.io/Three.js-Ocean-Scene/) so you can check how it runs and looks. It supports touch input too. Or you can watch [the video](https://youtu.be/xt4Nvrw1EMw).
 
 ## How it works
 ### Skybox
